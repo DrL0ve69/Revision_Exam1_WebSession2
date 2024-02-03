@@ -70,9 +70,22 @@
 
             <h2>Les boutons :</h2>
 
+
+                <ul class="explicationBoutons">
+                    <li>BOUTON_1 : réfère à la fonction "addEventLister" du bouton-compte ; modifie, le ".text content" → intérieur du texte remplacé ! Ceci étant dit, lorsqu'on bouge, le décompte recommence.</li>
+                    <li>BOUTON_2 : utilise un compteur pour modifier le texteContent du bouton.</li>
+                    <li>BOUTON_3 : le click du bouton 3 crée un span qui tient le décompte à l'extérieur du bouton</li>
+                    <li>BOUTON_4 : permet de remettre les boutons à 0.</li>
+                </ul>
+
             <ol class="liste_boutons">
 
-                <li><button id="bouton-compte">Cliquez pour débuter le décompte</button></li>
+                <li id="boutons-décompte">
+                    <button id="bouton-compte">Cliquez pour débuter le décompte</button>
+                    <button id="bouton-compte2">Bouton-compte2</button>
+                    <button id="bouton-compte3">Bouton-compte3</button>
+                    <button id="bouton-compte4">Bouton-compte4</button>
+                </li>
                 <li><button id="bouton_1">Cliquez pour débuter le décompte</button></li>
                 <li><button id="bouton_2">Cliquez pour débuter le décompte</button></li>
                 <li><button id="bouton_3">Cliquez pour débuter le décompte</button></li>
@@ -114,6 +127,11 @@
         </section>
 
     </main>
+
+    <footer id="bas-de-page" style="background-color: black; color: whitesmoke; text-align: center;">
+        <button id="bouton-footer">Bouton vers Formulaire1</button>
+        Copyright@DrL0v3
+    </footer>
 
 <h1>Allo</h1>
 <p id="paragraphe1"></p>

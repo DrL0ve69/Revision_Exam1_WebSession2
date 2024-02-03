@@ -27,15 +27,28 @@ lienExempleFormulaire.innerText = "Formulaire1";
 
 
 // Fonction
-function ChangerPage()
-{
-    alert("Voulez-vous vraiment quitter la page?");
-}
+
 // Exemple de bouton qui tient un compte
 const boutonCompte = document.getElementById("bouton-compte");
+const boutonCompte2 = document.getElementById("bouton-compte2");
+const boutonFooter = document.getElementById("bouton-footer");
+let compteurBouton2 = 0;
 
+// Compte les cliques rapides
 boutonCompte.addEventListener("click", (event) => {
+
     boutonCompte.textContent = `Nombre de cliques: ${event.detail}`; // le event.detail pour un bouton retourne le nombre de fois que le bouton a été cliqué
+});
+
+// Ouvre dans un nouvel onglet l'exempleFormulaire1
+
+boutonFooter.onclick=(event)=>
+{ window.open(lienExempleFormulaire.href) }
+
+// utilise le compteur pour ajuster le décompte du bouton
+boutonCompte2.addEventListener("click", (event) => {
+    compteurBouton2++;
+    boutonCompte2.textContent = `Nombre de cliques: ${compteurBouton2}`; // le event.detail pour un bouton retourne le nombre de fois que le bouton a été cliqué
 });
 function Popup(){
     alert("Bonjour la classe!")
