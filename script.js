@@ -49,6 +49,18 @@ boutonCompte2.addEventListener("click", (event) => {
     compteurBouton2++;
     boutonCompte2.textContent = `Nombre de cliques: ${compteurBouton2}`; // le event.detail pour un bouton retourne le nombre de fois que le bouton a été cliqué
 });
+const boutonCompte3 = document.getElementById("bouton-compte3");
+let compteurBouton3 = 0;
+function cliqueBoutonCompte3()
+{
+    if(compteurBouton3===0){ boutonCompte3.createElement("span",compteurBouton3).innerText(1); compteurBouton3++; }
+    else {boutonCompte3.nextElementSibling.innerText(compteurBouton3)}
+    compteurBouton3++;
+
+}
+
+// Voir le bouton 5 pour un bouton qui, lorsque cliqué, ouvre exempleFormulaire1.html dans la même fenêtre plutôt qu'un(e) nouvel onglet/fenêtre
+const lienFormulaire1 = lienExempleFormulaire.href;
 function Popup(){
     alert("Bonjour la classe!")
 }
