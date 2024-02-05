@@ -83,16 +83,27 @@
                 <li id="boutons-décompte">
                     <button id="bouton-compte">Cliquez pour débuter le décompte</button>
                     <button id="bouton-compte2">Bouton-compte2</button>
-                    <button id="bouton-compte3" onclick="boutonCompte3.append('Clique : ', `${compteurBouton3}`); compteurBouton3++;">Bouton-compte3</button>
-                    <button id="bouton-compte4">Bouton-compte4</button>
+                    <button id="bouton-compte3" onclick=" compteurBouton3++; document.querySelector('#decompteBouton3').innerHTML = compteurBouton3 + '';">Bouton-compte3</button><p id="decompteBouton3" style="padding-top: 40px; font-size: 2rem; line-height: 1.5rem; "></p>
+                    <button id="bouton-compte4" onclick="document.getElementById('bouton-compte4').innerText = document.getElementById('decompteBouton3').innerText;">Cliquez pour afficher le décompte du bouton 3</button>
                 </li>
-                <li><button id="bouton_1">Cliquez pour débuter le décompte</button></li>
-                <li><button id="bouton_2">Cliquez pour débuter le décompte</button></li>
-                <li><button id="bouton_3">Cliquez pour débuter le décompte</button></li>
-                <li><button id="bouton_4">Cliquez pour débuter le décompte</button></li>
-                <li><button id="bouton_5" onclick="window.open(lienFormulaire1,window.document.URL)">Lien vers Formulaire1 même fenêtre.</button></li>
+                <li><button id="bouton_1" class="boutonsSection2" onclick="this.innerText = document.getElementById('toggle1').value;">Affiche le nombre de patates sélectionnées ci-dessous.</button></li>
+                <li><button id="bouton_2" class="boutonsSection2">Cliquez pour débuter le décompte</button></li>
+                <li><button id="bouton_3" class="boutonsSection2">Cliquez pour débuter le décompte</button></li>
+                <li><button id="bouton_4" class="boutonsSection2">Cliquez pour débuter le décompte</button></li>
+                <li><button id="bouton_5 " class="boutonsSection2" onclick="window.open(lienFormulaire1,window.document.URL)">Lien vers Formulaire1 même fenêtre.</button></li>
 
             </ol>
+
+        </section>
+
+        <section>
+
+            <h2 id="toggle-bar">Barres ajustables :</h2>
+
+            <p> En utilisant le type range dans un input, on obtient ceci :
+                <input id="toggle1" type="range" min="0" max="100" name="quantite1" oninput="document.getElementById('resultatQuantité1').innerText = 'Vous avez sélectionné : ' + this.value + ' patates';">
+            </p>
+            <p id="resultatQuantité1"></p>
 
         </section>
 

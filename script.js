@@ -51,16 +51,21 @@ boutonCompte2.addEventListener("click", (event) => {
 });
 const boutonCompte3 = document.getElementById("bouton-compte3");
 let compteurBouton3 = 0;
-function cliqueBoutonCompte3()
-{
-    if(compteurBouton3===0){ boutonCompte3.createElement("span",compteurBouton3).innerText(1); compteurBouton3++; }
-    else {boutonCompte3.nextElementSibling.innerText(compteurBouton3)}
-    compteurBouton3++;
-
-}
 
 // Voir le bouton 5 pour un bouton qui, lorsque cliqué, ouvre exempleFormulaire1.html dans la même fenêtre plutôt qu'un(e) nouvel onglet/fenêtre
 const lienFormulaire1 = lienExempleFormulaire.href;
+
+// Enregistrer des objets du DOM dans un tableau :
+const arrayBoutons = document.getElementsByTagName("button");
+for (let x = 0; x <= arrayBoutons.length; x++) {
+
+    if(x===6 || x===4){ arrayBoutons[x].style.backgroundColor = "darkslategrey"; }
+    else if(x % 2 !== 0) { arrayBoutons[x].style.borderColor = "green" }
+    else{ arrayBoutons[x].style.color = "red" }
+    arrayBoutons[x].style.width = "200px";
+}
+
+
 function Popup(){
     alert("Bonjour la classe!")
 }
