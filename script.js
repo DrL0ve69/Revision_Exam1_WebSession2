@@ -23,6 +23,8 @@ document.getElementById("paragraphe2").innerHTML = "<strong>Texte</strong> du pa
 const lienExempleFormulaire = document.createElement("a");
 lienExempleFormulaire.href = "exempleFormulaire1.html";
 lienExempleFormulaire.innerText = "Formulaire1";
+const lienIndex = document.createElement(`a`)
+lienIndex.href = "index.html";
 
 
 // Fonction
@@ -60,9 +62,17 @@ const arrayBoutons = document.getElementsByTagName("button");
 for (let x = 0; x <= arrayBoutons.length; x++) {
 
     if(x===6 || x===4){ arrayBoutons[x].style.backgroundColor = "darkslategrey"; }
-    else if(x % 2 !== 0) { arrayBoutons[x].style.borderColor = "green" }
-    else{ arrayBoutons[x].style.color = "red" }
+    else if(x % 2 !== 0) { arrayBoutons[x].style.borderColor = "green"; }
+    else{ arrayBoutons[x].style.color = "red"; }
     arrayBoutons[x].style.width = "200px";
+}
+function Reformatter(){
+
+    var element = document.querySelector("#telephone");
+    var ancien_tel = element.value;
+
+    var nouveau_tel = "(" + ancien_tel.substring(0,3) + ") " + ancien_tel.substring(3,6) + "-" + ancien_tel.substring(6);
+    element.value = nouveau_tel;
 }
 
 

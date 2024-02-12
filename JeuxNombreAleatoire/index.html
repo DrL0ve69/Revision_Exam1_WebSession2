@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Jeux du nombre aléatoire</h1>
+
+    <label for="nbAVerifier">Choisissez un nombre entre 1 et 100 :
+        <input type="number" name="input" id="nbAVerifier">
+    </label>
+    <label for="boutonVerifier">
+        <input type="button" name="boutonVerifier" id="boutonVerifier" value="Vérifier" onclick="VerifierNombre()">
+    </label>
+
+    <p id="essaieEncore"></p>
+
+</body>
+</html>
