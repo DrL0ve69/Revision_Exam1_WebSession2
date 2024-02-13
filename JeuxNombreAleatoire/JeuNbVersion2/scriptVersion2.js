@@ -2,17 +2,12 @@
 //      1.1 Définition d'une constante qui crée un élément ; dans ce cas-ci un bouton(100boutons).
 //          1.1.1 Voir https://api.jquery.com/appendTo/ Ce snippet crée 100boutons avec Id
 //          Ex : $('<code html dans les balise></la fermée aussi si possible>').appendTo('.uneClasse') => à une classe ou autre appendTo('#unId'), etc...
-let arrayBoutons = {}
-
 for (let i = 0; i <= 100; i++) {
 
     $(`<button class="boutonsJeu" id="bouton${i}" value="${i}" onclick="hidden=true; VerifierNb();">${i}</button>`).appendTo('#boutonsNb0A100');
     console.log(`bouton${i}`);
-
-
 }
-$(`arrayBoutons`).addClass('.boutonsJeu');
-console.log(arrayBoutons[6]);
+
 //***   1.3 Ajouter notre élément au body ou autres sections du document. Ex : document.body.append(creerBoutons);
 //  Cependant, dans notre cas, il est nécessaire de <<append>> 100 boutons... voici les étapes :
 //          1.3.1 Utiliser une boucle de 1à100 ou 0à100.
@@ -28,7 +23,6 @@ console.log(nbATrouver);
 
 function VerifierNb()
 {
-
         document.querySelector('#nbEssayesErrones').innerText = ` Nombre d'essais : ${nbEssaies+1} \n`;
         nbEssaies++;
 }
