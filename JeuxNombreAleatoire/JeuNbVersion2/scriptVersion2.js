@@ -1,7 +1,7 @@
 // 1. Manipulation du DOM (document) pour créer l'interface de jeu : JQUERY
 //      1.1 Définition d'une constante qui crée un élément ; dans ce cas-ci un bouton(100boutons).
 //          1.1.1 Voir https://api.jquery.com/appendTo/ Ce snippet crée 100boutons avec Id
-//          Ex : $('<code html dans les balise></la fermée aussi si possible>').appendTo('.uneClasse') => à une classe ou autre appendTo('#unId'), etc...
+//          Ex : $('<code html dans les balises></la fermée aussi si possible>').appendTo('.uneClasse') => à une classe ou autre appendTo('#unId'), etc...
 for (let i = 0; i <= 100; i++) {
 
     $(`<button class="boutonsJeu" id="bouton${i}" value="${i}" onclick="hidden=true; VerifierNb();">${i}</button>`).appendTo('#boutonsNb0A100');
@@ -25,6 +25,7 @@ function VerifierNb()
 {
         document.querySelector('#nbEssayesErrones').innerText = ` Nombre d'essais : ${nbEssaies+1} \n`;
         nbEssaies++;
+        let boutonReponse = document.querySelector(`#bouton${nbATrouver}`);
+        if(boutonReponse.hidden=== true){document.querySelector('#essaieEncore').innerText = 'VOUS AVEZ RÉUSSI!!!!!!!';}
+        //manque le else
 }
-
-
