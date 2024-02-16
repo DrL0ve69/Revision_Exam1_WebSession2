@@ -1,0 +1,5 @@
+label { display: block; margin-top: 1rem; padding-right: 1rem; margin-right: 1rem; margin-left: 1rem;}
+input { display: block;margin-left: 1rem; }
+#container-flex { display: flex; }
+#container-flex > * { display: flex; margin-right: 1rem; }
+.container { padding-top: 1rem; }
