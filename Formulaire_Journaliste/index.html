@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport">
     <title>Formulaire Journaliste</title>
 
     <link rel="" href="/Libraries">
@@ -17,76 +17,90 @@
 
     </div>
 
-        <form>
-            <fieldset>
+    <form>
+        <fieldset>
 
-                <div class="container" id="mainContainer">
+            <div class="container" id="mainContainer">
 
-                    <div class="navbar-brand">
+                <div class="navbar-brand">
 
                         <h2>Devenez journaliste</h2>
 
-                    </div>
+                </div>
 
-                    <div class="container">
+                <div class="container">
 
-                        <label for="nomTexte">Nom :
+                    <label for="nomTexte">Nom :
 
-                            <input type="text" name="nomTexte" id="nomTexte" maxlength="50" required>
+                        <input type="text" name="nomTexte" id="nomTexte" placeholder="Entrez votre nom"
+                                   maxlength="50" value="" onblur="" autofocus required>
 
-                        </label>
+                    </label>
 
-                        <label for="biographie">Brève biographie :
+                    <label for="biographie">Brève biographie :
 
-                            <textarea class="form-control" name="biographie" id="biographie" cols="50" rows="5"
-                                      required></textarea>
+                        <textarea
+                                class="form-control" name="biographie" id="biographie"
+                                placeholder="Écrivez-nous quelques lignes vous décrivant..." cols="50" rows="5"
+                                required>
 
-                        </label>
+                        </textarea>
 
-                    </div>
+                    </label>
+
+                </div>
 
 
-                    <div class="container" id="container-flex">
+                <div class="container" id="container-flex">
 
-                        <div class="input-group mb-3">
+                    <div class="input-group mb-3">
 
-                            <label class="input-group-text" for="inputGroupSelect01">Specialite :
-                            <select class="form-select" id="inputGroupSelect01" required>
-                                <option >Choix...</option>
-                                <option value="1">Politique</option>
-                                <option value="2">Informatique</option>
-                                <option value="3">Physique</option>
+                        <label class="input-group-text" for="inputGroupSelect01">Specialite :
+                            <select class="form-select" id="inputGroupSelect01" name="choixSpecialite" required>
+                                <option disabled>Choix...</option>
+                                <option name="choixSpecialite" value="Politique">Politique</option>
+                                <option name="choixSpecialite" value="Informatique">Informatique</option>
+                                <option name="choixSpecialite" value="Physique">Physique</option>
                             </select>
-                            </label>
-
-                        </div>
-
-                        <label for="couleurPreferee">Couleur préférée =>
-
-                            <input type="color" name="couleurPreferee" id="couleurPreferee" required>
-
                         </label>
 
                     </div>
 
-                    <div class="container" id="container-flex2">
+                    <label for="couleurPreferee">Couleur préférée =>
 
-                        <button name="boutonSoumettre" id="boutonSoumettre" type="submit">Soumettre</button>
-                        <button name="boutonSoumettre" id="boutonAnnuler" type="reset">Annuler</button>
+                        <input type="color" name="couleurPreferee" id="couleurPreferee" required>
 
-                    </div>
-
-                </div>
-
-                <div class="container" id="notreEquipe">
-
-                    <h2>Notre Équipe</h2>
+                    </label>
 
                 </div>
 
-            </fieldset>
-        </form>
+                <div class="container" id="container-flex2">
 
+                        <button name="boutonSoumettre" id="boutonSoumettre" type="button"
+                                onclick="VerifierFormulaire();">
+                            Soumettre
+                        </button>
+
+                        <button name="boutonAnnuler" id="boutonAnnuler" type="reset"
+                                onclick="document.querySelector('#boutonSoumettre').disabled = false;">Annuler</button>
+
+                </div>
+
+            </div>
+
+            <div class="container" id="notreEquipe">
+
+                <h2>Notre Équipe</h2>
+
+                <section class="containerEquipe" id="sectionEquipe">
+                    <p id="membresEquipe"></p>
+
+                </section>
+
+            </div>
+
+        </fieldset>
+    </form>
 
 </body>
 </html>

@@ -1,13 +1,13 @@
 * { box-sizing: border-box; padding: 0; margin: 0; }
-body { margin: 0 auto; font-family: Calibri,sans-serif; }
+body { margin: 0 auto; font-family: Calibri,sans-serif; padding: 1rem; }
 fieldset { padding: 0.5rem; }
 
-.container { padding: 1rem; margin: 1rem; }
-#container-flex, #container-flex > * { display: flex; }
-fieldset { display: flex; justify-content: stretch; background-color: bisque; }
+.container { padding: 1rem;}
+#container-flex, #container-flex > * { display: flex;}
+#mainContainer {  border-right: #141619 dashed 2px; }
+
+fieldset { display: flex; justify-content: space-evenly; background-color: bisque; }
+
 label { display: block; margin-top: 1rem; margin-right: 1rem;}
 input, #biographie { display: block; }
 button { margin-right: 1.5rem; height: 50px; width: 150px;}
-
-
-
