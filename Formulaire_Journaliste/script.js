@@ -8,7 +8,8 @@
 //   2.3.2 RegExTextArea => Contraintes?
 
 // 3. Soumission du formulaire et vérification des champs *** PAS DE COULEUR IDENTIQUE
-
+let compteur = 0;
+let equipeJournaliste = [];
 function VerifierFormulaire()
 {// 1. Manipulation du DOM, les variables et RegEx, créer objets/classes Journalistes et Équipe de journalistes.
 	let inputNom = document.querySelector('#nomTexte').value;
@@ -17,9 +18,11 @@ function VerifierFormulaire()
 	let inputCouleur = document.querySelector('#couleurPreferee').value;
 
 
+
 	let journaliste = {nom:inputNom, biographie:inputBiographie, specialite:inputSpecialite, couleur:inputCouleur};
-	let equipeJournaliste = {};
-	equipeJournaliste += journaliste;
+
+	equipeJournaliste[compteur] = [journaliste];
+	compteur++;
 
 	if (/[A-Z][a-z]/.test(inputNom) !== true || inputNom === null || inputBiographie === null)
 	{
@@ -27,8 +30,9 @@ function VerifierFormulaire()
 	}
 	else
 	{
-		document.querySelector('#membresEquipe').innerText += "Nom : " + inputNom + "\n" + "Specialité" +
-			" : " + inputSpecialite + "\n" + "Couleur favorite : " + inputCouleur + "\n\n" + journaliste.nom;
+		//document.querySelector('#membresEquipe').innerHTML.color = inputCouleur; Ajuster avec couleur roundedpills avec inputCouleur
+		document.querySelector('#membresEquipe').innerText += "Nom : " + journaliste.nom + "\n" + "Specialité" +
+			" : " + inputSpecialite + "\n" + "Couleur favorite : " + inputCouleur + "\n\n";
 		console.log(inputSpecialite,inputBiographie,inputNom,inputCouleur,equipeJournaliste);
 	}
 }
