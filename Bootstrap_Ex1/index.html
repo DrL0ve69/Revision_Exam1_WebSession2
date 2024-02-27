@@ -63,28 +63,98 @@
         <section class="container">
 
             <form>
+                <fieldset>
 
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="50">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="container" id="mainContainer">
 
+                        <div class="navbar-brand">
+
+                            <h2>Devenez journaliste</h2>
+
+                        </div>
+
+                        <div class="container">
+
+                            <label for="nomTexte">Nom :
+
+                                <input type="text" name="nomTexte" id="nomTexte" placeholder="Entrez votre nom"
+                                       maxlength="50" value="" onblur="" autofocus required>
+
+                            </label>
+
+                            <label for="biographie">Brève biographie :
+
+                                <textarea
+                                        class="form-control" name="biographie" id="biographie"
+                                        placeholder="Écrivez-nous quelques lignes vous décrivant..." cols="50" rows="5"
+                                        required>
+
+                                 </textarea>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="container" id="container-flex">
+
+                            <div class="input-group mb-3">
+
+                                <label class="input-group-text" for="inputGroupSelect01">Specialite :
+                                    <select class="form-select" id="inputGroupSelect01" name="choixSpecialite" required>
+                                        <option disabled>Choix...</option>
+                                        <option name="choixSpecialite" value="Politique">Politique</option>
+                                        <option name="choixSpecialite" value="Informatique">Informatique</option>
+                                        <option name="choixSpecialite" value="Physique">Physique</option>
+                                    </select>
+                                </label>
+
+                            </div>
+
+                            <label for="couleurPreferee">Couleur préférée =>
+
+                                <input type="color" name="couleurPreferee" id="couleurPreferee" required>
+
+                            </label>
+
+                        </div>
+
+                        <div class="container" id="container-flex2">
+
+                            <button name="boutonSoumettre" id="boutonSoumettre" type="button"
+                                    onclick="VerifierFormulaire();">
+                                Soumettre
+                            </button>
+
+                            <button name="boutonAnnuler" id="boutonAnnuler" type="reset"
+                                    onclick="document.querySelector('#boutonSoumettre').disabled = false;">Annuler</button>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
             </form>
 
         </section>
 
         <section class="container" id="equipes-container">
+
             <h2>Les équipes</h2>
+
+            <div class="d-flex flex-lg-column" id="div-container-equipe">
+
+                <div class="p-2">
+                    <p class="badge text-bg-success rounded-pill">Buddy111111111111111111111111111111111111</p>
+                </div>
+                <div class="p-2">
+
+                    <p class="badge text-bg-success rounded-pill">Buddy2</p>
+
+                </div>
+
+            </div>
+
         </section>
 
     </div>
