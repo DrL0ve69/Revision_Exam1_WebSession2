@@ -1,6 +1,5 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 body { padding: 1rem; margin: 0 auto; }
 form > div{ display: flex;}
-.mb-3, input { width: 500px; }
 #section-main { display: flex; }
 h2 { text-align: center; }
