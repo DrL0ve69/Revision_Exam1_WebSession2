@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap_ex1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrL0ve69/Revision_Exam1_WebSession2.git"
+  },
+  "private": true
+}
